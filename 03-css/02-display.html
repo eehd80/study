@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : css</title>
+</head>
+<body>
+    <h1>display</h1>
+    <h2>1. display : inline-block</h2>
+
+    <!-- block : 가로세로 값을 갖을 수 있고 밑으로 떨어짐,
+                        기본 가로 100% 값을 가짐 -->
+    <!-- inline(텍스트) :  가로세로 값을 가질 수 없고 옆으로 붙음  -->
+
+
+    <ul class="lst-display">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+    <style>
+        ul {
+            /* display: block; */
+            list-style: none;
+            margin: 0 auto;padding: 0;
+            text-align: center;
+        }
+        ul li {
+            /* inline이 포함되면 텍스트로 생각하삼 */
+            display: inline-block;
+        }
+        ul a {
+            display: block;
+            width: 100px;height: 50px;
+            background: tomato;
+            text-align: center; line-height: 50px;
+            color: #fff; text-decoration: none;
+        }
+    </style>
+
+    <hr>
+    <h2>2. display : none</h2>
+
+    <div class="layer">레이어</div>
+
+    <!-- w300, h300, bg-c -->
+    <style>
+
+        /* 웹접근성에서는 display:none을 사용하시면 스크린리더 못 읽어요. */
+        .layer {
+            display: block;
+            width: 300px; height: 300px;
+            background-color: tomato;
+        }
+        .layer:hover {
+            background-color: lightblue;
+        }
+    </style>
+    
+</body>
+</html>

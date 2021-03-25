@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자 : css</title>
+    <style>
+        * {
+            margin: 0;padding: 0;
+            font-size: 14px;line-height: 1.5;color: #000;
+            text-decoration: none; box-sizing: border-box;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상선택자 CSS</h1>
+
+    <h2>상태선택자</h2>
+
+    <a href="#" class="link-hover">마우스 오버</a>
+    <style>
+        /* w100, h50, bg-c:tomato */
+        .link-hover {
+            display: block;
+            width: 100px;height: 50px;
+            background-color: tomato; color: #fff;
+        }
+        .link-hover:hover {
+            background-color: lightblue; color: #000;
+        }
+    </style>
+
+    <hr>
+    <label for="id">아이디</label>
+    <input type="text" name="id" id="id">
+    <br>
+    <label for="pw">비밀번호</label>
+    <input type="password" name="pw" id="pw">
+
+    <style>
+        input {
+            width: 100px; height: 30px;
+            border: 1px solid #999;
+        }
+        input:focus {
+            background-color:lightblue;
+        }
+        input[type="text"]:focus {
+            background-color: lightpink;
+        }
+    </style>
+
+<hr>
+    <h2>순서 선택자</h2>
+    <ul class="list1">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+    <style>
+        .list1 li {
+            margin-bottom: 5px;
+        }
+        .list1 li:first-child {
+            background-color: orange;
+        }
+        .list1 li:last-child {
+            background-color: blue;
+            margin-bottom: 0;
+        }
+        .list1 li:nth-child(2) {
+            background-color: blueviolet;
+        }
+        .list1 li:nth-child(3) {
+            background-color: greenyellow;
+        }
+    </style>
+
+    <hr>
+    <h2>가상선택자</h2>
+    <ul class="lst2">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+    </ul>
+    <style>
+        .lst2 a::before {
+            content: '<::before 가상클래스>';
+            color: red;
+        }
+        .lst2 a::after {
+            content: '<::after 가상클래스>';
+            color: blue;
+        }
+        .lst2 li::before {
+            content: '앞-';
+            color: pink;
+        }
+        .lst2 li::after {
+            content: '-뒤';
+            color: lightblue;
+        }
+    </style>
+
+    <ul class="lst3">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+    <style>
+        .lst3 li::before {
+            content: '';
+            display: inline-block;
+            width: 5px;height: 5px;
+            margin-right: 5px;
+            background: red;
+        }
+    </style>
+
+    <ul class="lst4">
+        <li>회사소개</li>
+        <li>인재채용</li>
+        <li>이용약관</li>
+        <li>개인정보처리방침</li>
+    </ul>
+    <style>
+        .lst4 {
+            display: flex;
+        }
+        .lst4 li::after {
+            content: '';
+            display: inline-block;
+            width: 1px; height: 10px;
+            margin: 0 10px;
+            background: red;
+        }
+        .lst4 li:last-child::after {
+            display: none;
+        }
+    </style>
+
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+<br>    
+</body>
+</html>

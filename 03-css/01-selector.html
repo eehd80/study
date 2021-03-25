@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector : css</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-size: 14px;line-height: 1.5;color: #000;
+            box-sizing: border-box; text-decoration: none;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+
+    <style>
+        nav {
+            background-color: #eee;
+        }
+        .nav-depth1 {
+            border: 1px solid red;
+        }
+        /* .nav-depth1 밑에 있는 자손 중 li를 선택 */
+        .nav-depth1 li {
+            border: 1px solid blue;
+        }
+        /* .nav-depth1 밑에 있는 자식 중 li를 선택 */
+        .nav-depth1 > li {
+            border: 5px solid orange;
+        }
+        .nav-depth1 > li > a {
+            background-color: green;
+        } 
+        .nav-depth2 a {
+            background-color: purple;
+        }
+        #gnb {
+            border: 5px solid #000;
+        }
+    </style>
+
+    <!-- id값은 페이지 내 중복 불가능 -->
+    <!-- id값은 개발자 사용 -->
+    <nav id="gnb">
+        <!-- class 값은 페이지 내 중복 가능 -->
+        <ul class="nav-depth1">
+            <li>
+                <a href="#">menu1</a>
+                <ul class="nav-depth2">
+                    <li><a href="#">menu1-1</a></li>
+                    <li><a href="#">menu1-2</a></li>
+                    <li><a href="#">menu1-3</a></li>
+                    <li><a href="#">menu1-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+                <ul class="nav-depth2">
+                    <li><a href="#">menu2-1</a></li>
+                    <li><a href="#">menu2-2</a></li>
+                    <li><a href="#">menu2-3</a></li>
+                    <li><a href="#">menu2-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+                <ul class="nav-depth2">
+                    <li><a href="#">menu3-1</a></li>
+                    <li><a href="#">menu3-2</a></li>
+                    <li><a href="#">menu3-3</a></li>
+                    <li><a href="#">menu3-4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+                <ul class="nav-depth2">
+                    <li><a href="#">menu4-1</a></li>
+                    <li><a href="#">menu4-2</a></li>
+                    <li><a href="#">menu4-3</a></li>
+                    <li><a href="#">menu4-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

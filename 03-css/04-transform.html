@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform : css</title>
+    <style>
+        div {
+            width: 100px; height: 100px;
+            background: tomato;
+            transition: transform 2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+
+    <div>original box</div>
+
+    <h2>1. translate</h2>
+    <div class="t1"></div>
+    <div class="t2"></div>
+    <style>
+        .t1:hover {
+            transform: translate(30px, -20px);
+        }
+        .t2:hover {
+            transform: translate(60%, 20%);
+        }
+    </style>
+
+    <h2>2. rotate</h2>
+    <div class="t3"></div>
+    <style>
+        .t3:hover {
+            transform: rotate(45deg);
+        }
+    </style>
+
+    <h2>3. scale</h2>
+    <div class="t4"></div>
+    <style>
+        .t4:hover {
+            /* 기준 1 */
+            transform: scale(2.5, 0.5);
+            transform-origin: 0 0; /* 기준점 */
+        }
+    </style>
+
+    <h2>4. skew</h2>
+    <div class="t5">
+        <span>logo</span>
+    </div>
+
+    <style>
+        .t5 {
+            text-align: center; line-height: 100px;
+        }
+        .t5:hover {
+            transform: skewX(-45deg) translateX(50px);
+        }
+        .t5:hover span {
+            display: block;
+            transform: skewX(45deg);
+        }
+    </style>
+
+    
+    <br><br><br><br><br><br><br><br>
+    
+</body>
+</html>

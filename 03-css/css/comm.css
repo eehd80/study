@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    font-size: 14px; line-height: 1.5; color: #000;
+    list-style: none; text-decoration: none;
+    box-sizing: border-box;
+}
+
+header {
+    height: 50px; /* 1. 엄마에게 높이값을 넣어준다 */
+    padding-top: 10px;
+    background-color: #eee;
+    text-align: center;
+}
+h1 {
+    float: left; height: 30px;
+    background-color: tomato;
+}
+nav {
+    display: inline-block;
+    background-color: blue;
+}
+.nav-depth1 li {
+    float: left;
+}
+.nav-depth1 a {
+    display: block;
+    padding: 5px;
+}
+.lang {
+    float: right; height: 30px;
+    background-color: green;
+}
+.lst-lang li {
+    float: left;
+}
+
+.container {
+    /* height: 200px; */
+    /* overflow: hidden;  */
+    /* 2. 높이값을 넣을 수 없는 영역에는 overflow: hidden 속성을 넣는다. */
+    background-color: #999;
+}
+main {
+    overflow: hidden;
+    float: left;
+    width: 70%;
+    background: rgba(0, 102, 128, 0.5);
+}
+.lst-shop {overflow: hidden;}
+.lst-shop li {
+    float: left;
+    width: 30%; height: 50px; margin-right: 5%;
+    border: 1px solid rgba(255, 0, 0, 0.5); background: yellow;
+}
+.lst-shop li:nth-child(3n) { /* 3, 6 ,9 */
+    margin-right: 0;
+}
+.lst-shop li a {
+    display: block; height: 100%;
+}
+
+/* bootstrap 정렬 */
+.lst-shop2 {
+    overflow: hidden;
+    margin: 20px -5px 0;
+}
+.lst-shop2 li {
+    float: left; width: 33.333%;
+    padding: 0 5px;
+    /* border: 1px solid MediumSeaGreen;
+    background: SeaGreen; */
+}
+.lst-shop2 a {
+    display: block;
+    background: Violet;
+    border: 1px solid #eee;
+}
+aside {
+    float: right;
+    height: 100px; width: 28%;
+    background: rgba(128, 0, 128, 0.5);
+}
+footer {
+    background: yellowgreen;
+    text-align: center;
+}
+.copyright {
+    display: inline-block;
+    /* float: left; */
+    /* clear: both; float clear */
+    background: rgb(255, 217, 0);
+}
+.sns {
+    float: right;
+}
+
+/* 3. clearfix 처리 */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}

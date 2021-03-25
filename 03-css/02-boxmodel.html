@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel : css</title>
+</head>
+<body>
+    <h1>boxmodel</h1>
+    <h2>1. 높이의 상대값</h2>
+
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">높이의 상대값</div>
+        </div>
+    </div>
+    <style>
+        body {
+            padding-bottom: 300px;
+        }
+        .box1 {
+            /* height: 300px; */
+            border: 1px solid red;
+        }
+        .box2 {
+            /* height: 100%; */
+            border: 1px solid blue;
+        }
+        .box3 {
+            height: 300px;
+            border: 1px solid purple;
+        }
+    </style>
+
+    <hr>
+    <h2>2. max-width : 최대 가로 사이즈</h2>
+    <div class="max-width">max-width</div>
+    <style>
+        .max-width {
+            height: 100px; width: 100%;
+            max-width: 1600px; margin: auto;
+            background: tomato;
+        }
+    </style>
+
+    <hr>
+    <h2>3. min-width : 최소 가로 사이즈</h2>
+    <div class="min-width">min-width</div>
+    <style>
+        .min-width {
+            height: 100px; 
+            width: 100%;
+            min-width: 300px; max-width: 600px;
+            background: purple;
+        }
+    </style>
+
+    <hr>
+    <h2>4. margin 가운데 정렬</h2>
+    <div class="margin-auto">
+        block 요소 가운데 정렬
+    </div>
+
+    <!-- w50% h100px bgc -->
+    <style>
+        .margin-auto {
+            width: 50%; height: 100px;background-color: tomato;
+            margin: 0 auto; /* 왼쪽 오른쪽의 마진값을 동일하게 맞춰줘서 가운데 정렬됨 */  
+        }
+    </style>
+
+    <hr>
+    <h2>5. padding</h2>
+    <div class="padding-1">padding</div>
+    <div class="padding-2">padding box-sizing</div>
+    <!-- w200, h200 , bg-c -->
+    <style>
+        /* width = width + padding + border */
+        .padding-1 {
+            width: 130px; height: 150px;
+            padding: 20px 30px; border: 5px solid #000;
+            background-color: lightblue;
+        }
+        .padding-2 {
+            width: 200px; height: 200px;
+            padding: 20px 30px; border: 5px solid #000;
+            background-color: lightpink;
+            box-sizing: border-box;
+        }
+    </style>
+
+    
+</body>
+</html>

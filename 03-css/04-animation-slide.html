@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation slide : css</title>
+    <style>
+        * {
+            margin: 0; padding: 0;
+            font-size: 14px; line-height: 1.5;color: #000;
+            list-style: none; text-decoration: none;
+            box-sizing: border-box;
+        }
+        .slide {
+            overflow: hidden;
+            width: 1200px; height: 300px;
+            position: relative;
+        }
+        .slide ul {
+            display: flex;
+            position: absolute; top: 0; left: 0;
+            animation: slide-ani 10s infinite alternate;
+        }
+        @keyframes slide-ani {
+            0% {left: 0;} /* 1번째 슬라이드 */
+            30% {left: 0;} /* 1번째 슬라이드 */
+            40% {left: -1200px;} /* 2번째 슬라이드 */
+            70% {left: -1200px;} /* 2번째 슬라이드 */
+            80% {left: -2400px;} /* 3번째 슬라이드 */
+            100% {left: -2400px;} /* 3번째 슬라이드 */
+        }
+    </style>
+</head>
+<body>
+    <h1>animation slide</h1>
+    <!-- .slide w:1200px -->
+    <div class="slide">
+        <ul>
+            <li>
+                <a href="#"><img src="./images/slide1.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/slide2.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/slide3.jpg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

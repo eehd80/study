@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border : css</title>
+</head>
+<body>
+    <h1>border</h1>
+
+    <div class="bd-1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </div>
+    <div class="bd-2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </div>
+    <div class="bd-3">radius1</div>
+    <div class="bd-4">radius2</div>
+    <div class="bd-5">radius3</div>
+    
+    <style>
+        .bd-5 {
+            width: 200px; height: 200px;
+            background-color: green;
+            border-radius: 10px 50px 100px;
+        }
+        body {padding-bottom: 300px;}
+        div {
+            margin-bottom: 10px;
+        }
+        .bd-1 {
+            border: 1px solid tomato;
+        }
+        .bd-2 {
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        /* w200, h200, bd-radius 5px, bg-c aqua */
+        .bd-3 {
+            width: 200px; height: 200px;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+        .bd-4 {
+            width: 200px; height: 200px;
+            background-color: lightpink;
+            border-radius: 50%;
+        }
+
+    </style>
+
+
+
+</body>
+</html>
