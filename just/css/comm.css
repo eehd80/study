@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+* {
+  margin: 0; padding: 0;
+  font-size: 14px;
+   line-height: 1.5; 
+  color: #222328;
+  text-decoration: none; 
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* comm */
+.blind {
+  overflow: hidden;
+  font-size: 0;line-height: 0;
+  text-indent: -9999px;
+}
+/* 비활성화 탭 */
+.tab .tit-tab a {
+  display: block;
+  height: 50px; background-color: #eee;
+  text-align: center; line-height: 50px;
+  border-bottom: 3px solid #002866;
+}
+/* 활성화 탭 */
+.tab .on .tit-tab a {
+  background: #002866; color: #fff;
+}
+.tab .cont-tab {
+  display: none;
+  position: absolute; top: 60px; left: 0;
+  width: 360px;
+}
+.tab .on .cont-tab {
+  display: block;
+}
+.tab {
+  position: relative;
+}
+
+
+.wrap {
+  width: 1200px; margin: 0 auto;
+}
+header {
+  position: relative;
+  display: flex; justify-content: space-between;
+  height: 100px; 
+  background: #fff;
+}
+.logo a {
+  display: block;
+  width: 125px; height: 100px;
+  background: url(../images/logo-kakaoi.svg) 0 50% no-repeat;
+  text-indent: -9999px;
+}
+footer .logo {
+  margin-left: 10px;
+}
+
+nav {
+  display: flex; align-items: center;
+  /* width: 40%; */
+  /* margin-right: -40px; */
+}
+
+
+.nav-depth1 {
+  display: flex; justify-content: space-between;
+  width: 100%;
+}
+.nav-depth1 > li {
+  position: relative;
+}
+.nav-depth1 > li > a {
+  display: block;
+  height: 100px; padding: 0 40px;
+  line-height: 100px; 
+  /* text 수직 가운데 정렬 line-height값을 엄마 태그의 높이값 */
+}
+.nav-depth1 > li:hover > a {
+  color: tomato;
+  border-bottom: 3px solid tomato;
+}
+/* mouse-out */
+.nav-depth2 {
+  overflow: hidden;
+  /* display: none; */
+  position: absolute; top: 100px; left: 0;  
+  z-index: 100; 
+  width: 100%; padding-top: 0; height: 0;
+  transition: all .5s;
+}
+/* mouse-over */
+nav:hover .nav-depth2, nav:hover .nav-bg {
+  padding-top: 10px;
+  height: 135px;
+}
+
+.nav-depth2 a {
+  display: block; 
+  padding: 4px 0;
+  text-align: center;
+}
+.nav-depth2 a:hover {
+  background: tomato; color: #fff;
+}
+.nav-bg {
+  /* display: none; */
+  position: absolute; top: 100px; left: 0; 
+  z-index: 100;
+  width: 100%; height: 0; 
+  background: #fff; border-top: 1px solid tomato;
+  transition: height .5s;
+}
+
+.slide {
+  position: relative; overflow: hidden;
+  height: 300px;
+}
+.slide ul {
+  display: flex;
+  position: absolute;top: 0;left: 0;
+}
+
+.container {
+  display: flex; justify-content: space-between;
+  height: 200px; padding: 10px 0;
+}
+.container .tab, .container > section {
+  width: 30%;
+}
+.container .tab {
+  display: flex;
+}
+.sec-bbs {
+  width: 50%;
+}
+
+/* 공지사항 */
+/* 1. 글 앞에 아이콘(점) 추가 */
+/* 2. 줄간격 넓히기 */
+/* 3. 말줄임 */
+.sec-bbs .cont-tab a {
+  display: block;
+  padding: 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sec-bbs .cont-tab a::before {
+  display: inline-block;
+  content: '';
+  width: 5px;height: 5px;
+  margin: -5px 5px 0 0;
+  background: red;
+  vertical-align: middle;
+}
+.sec-gallery {
+  width: 50%;
+}
+.sec-gallery ul {
+  display: flex; 
+  justify-content: space-between;
+}
+.sec-gallery li {
+  width: 30%;
+}
+.sec-gallery a {
+  display: block;
+}
+.sec-gallery img {
+  width: 100%; height: 120px;
+  object-fit: cover; object-position: 100% 50%;
+}
+.sec-bnr a {
+  display: block;
+}
+.sec-bnr img {
+  width: 360px; height: 180px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.sec-goto .cont {
+  display: flex; align-items: center;
+  height: 100%;
+}
+.sec-goto a {
+  display: block;
+  height: 50px; padding-left: 60px;
+  line-height: 50px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.sec-goto li:first-child a {
+  background-image: url(../images/ico-goto1.png);
+}
+.sec-goto li:nth-child(2) a {
+  background-image: url(../images/ico-goto2.png);
+}
+.sec-goto li:nth-child(3) a {
+  background-image: url(../images/ico-goto3.png);
+}
+.sec-goto li:last-child a {
+  background-image: url(../images/ico-goto4.png);
+}
+.sec-goto .lst-goto {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+}
+.lst-goto li {
+  width: 50%; 
+  margin-bottom: 20px;
+}
+
+
+footer {
+  display: flex; justify-content: space-between;
+  background-color: #999;
+}
+.copyright {
+  margin-top: 40px;
+  color: #fff;
+}
+.lst-sns {
+  display: flex;
+  margin-top: 20px;
+}
+.lst-sns a {
+  display: block;
+  padding: 20px; color: #fff;
+}
+
+.modal-wrap {
+  display: none; justify-content: center; align-items: center;
+  position: fixed; top: 0; left: 0; right: 0;bottom: 0; z-index: 110;
+  background: rgba(0,0,0,.5);
+}
+.modal-wrap .inner {
+  position: relative;
+  width: 668px; height: 553px;
+}
+.modal-wrap img {
+  /* overflow: hidden; */
+  border-radius: 33px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal-wrap button {
+  display: flex; justify-content: center; align-items: center;
+  position: absolute; top: -30px; right: -30px;
+  width: 70px; height: 70px;
+  background: #fff; border-radius: 50%;
+  border: none; cursor: pointer;
+}
+.modal-wrap .las {
+  display: block;
+  font-size: 2em;
+}
